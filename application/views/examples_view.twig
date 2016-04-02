@@ -2,7 +2,7 @@
 
 {% block scripts %}
 {{parent()}}
-    <script type="text/javascript" src="{{ base_url() }}/assets/js/script.js"></script>
+    <script type="text/javascript" src="{{ base_url() }}assets/js/script.js"></script>
 {% endblock %}
 
 {% block header %}
@@ -21,27 +21,27 @@
 
             {% for item in examples %}
                 <div class="LineImg">
-                    <img src='../assets/img/line.png' width='100%' height='25' />
+                    <img src='../../assets/img/line.png' width='100%' height='25' />
                 </div><br/>
                 <div class="wrapSlider">
                     <div class="slider">
                         <div>
-                            <img src="{{ item.photo_before.0 }}" class="img-responsive">
+                            <img src="{{ item.photo_before.0 }}" class="img-fluid">
                         </div>
 
                         <div>
-                            <img src="{{ item.photo_after.0 }}" class="img-responsive">
+                            <img src="{{ item.photo_after.0 }}" class="img-fluid">
                         </div>
 
                         <div>
-                            <img src="{{ item.photo_before.1 }}" class="img-responsive">
+                            <img src="{{ item.photo_before.1 }}" class="img-fluid">
                         </div>
                         <div>
-                            <img src="{{ item.photo_after.1 }}" class="img-responsive">
+                            <img src="{{ item.photo_after.1 }}" class="img-fluid">
                         </div>
                     </div>
                 </div>
-                <h3>{{ cat[item.category] }}</h3>
+                <h3>{{ examp_cat[item.category] }}</h3>
                 <p>{{ item.about| raw }}</p>
             {% endfor %}
 

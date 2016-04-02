@@ -56,12 +56,12 @@ var config,
 
                                 var div = document.createElement('div');
                                 $(div).append($('<img />',{
-                                    class:'img-responsive',
+                                    class:'img-fluid',
                                     src: value,
                                 }));
                                 $(divSlider).append(div);
                             });
-
+//console.log("FIX");
                             // синглтон запрос который возвращяет значения заголовков
                             if(!showH3){
                                 if(!config){
